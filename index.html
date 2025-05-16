@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANIFEST LIKE YOU MEAN IT | Exclusive Limited Edition | Ewebire</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Futura:wght@400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap">
+    <style>
+        /* Custom Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --gold-primary: #c6a650;
+            --gold-light: #d4b968;
+            --gold-dark: #9a7f3b;
+            --beige-light: #f5f1e6;
+            --beige-medium: #eae2d0;
+            --beige-dark: #d5cbb9;
+        }
+        
+        /* Base Styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: var(--beige-light);
+            background-image: url('https://cdn.jsdelivr.net/gh/tailwindlabs/tailwindcss/src/img/beams.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .gold-text {
+            color: var(--gold-primary);
+        }
+        
+        .brand-logo {
+            font-family: 'Futura', 'Montserrat', sans-serif;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: var(--gold-primary);
+        }
+        
+        /* Gold Button */
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
+            color: white;
+            font-weight: 500;
+            padding: 12px 30px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(198, 166, 80, 0.2);
+            border: none;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(198, 166, 80, 0.3);
+        }
+        
+        .btn-gold:active {
+            transform: translateY(0);
+        }
+        
+        .btn-gold::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: translateX(-100%);
+        }
+        
+        .btn-gold:hover::after {
+            animation: shimmer 1.5s infinite;
+        }
+        
+        @keyframes shimmer {
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        
+        /* Premium Card */
+        .premium-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(198, 166, 80, 0.1);
+        }
+        
+        .premium-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        /* Custom Container */
+        .container-custom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Gold Border */
+        .gold-border {
+            border: 2px solid var(--gold-primary);
+            border-radius: 2px;
+        }
+        
+        /* Gold Divider */
+        .gold-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+            margin: 2rem auto;
+            width: 60%;
+        }
+        
+        /* Luxury Background */
+        .luxury-bg {
+            background-color: white;
+            background-image: url('https://cdn.jsdelivr.net/gh/tailwindlabs/tailwindcss/src/img/beams.jpg');
+            background-size: cover;
+            position: relative;
+        }
+        
+        /* Book Display */
+        .book-display {
+            position: relative;
+        }
+        
+        .book-shadow {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 20px;
+            background: radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1;
+        }
+        
+        /* Countdown Timer */
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 2rem 0;
+        }
+        
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .countdown-value {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: var(--gold-primary);
+            background: white;
+            border: 1px solid var(--gold-light);
+            border-radius: 8px;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .countdown-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+            color: #777;
+        }
+        
+        /* Form Input */
+        .luxury-input {
+            width: 100%;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: 1px solid var(--beige-dark);
+            border-radius: 4px;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .luxury-input:focus {
+            outline: none;
+            border-color: var(--gold-primary);
+            box-shadow: 0 0 0 2px rgba(198, 166, 80, 0.2);
+        }
+        
+        /* Testimonial */
+        .testimonial {
+            position: relative;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-quote {
+            font-size: 4rem;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            color: var(--gold-light);
+            opacity: 0.2;
+        }
+        
+        /* Feature Icon */
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: white;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 6px rgba(198, 166, 80, 0.2);
+        }
+        
+        /* Limited Edition Badge */
+        .limited-badge {
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(198, 166, 80, 0.2);
+        }
+        
+        .limited-badge i {
+            margin-right: 5px;
+        }
+        
+        /* Animation for form focus */
+        @keyframes borderGlow {
+            0% {
+                box-shadow: 0 0 0 0 rgba(198, 166, 80, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(198, 166, 80, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(198, 166, 80, 0);
+            }
+        }
+        
+        .luxury-input:focus {
+            animation: borderGlow 2s infinite;
+        }
+        
+        /* Elegant number animation */
+        @keyframes fadeNumber {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-number {
+            animation: fadeNumber 0.5s ease forwards;
+        }
+        
+        /* Marble background */
+        .marble-bg {
+            background-image: url('https://cdn.jsdelivr.net/gh/tailwindlabs/tailwindcss/src/img/beams.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .marble-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 0;
+        }
+        
+        /* Book frame */
+        .book-frame {
+            position: relative;
+            padding: 12px;
+            background: white;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 1px solid var(--gold-light);
+        }
+        
+        .book-frame::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid var(--gold-primary);
+            z-index: 1;
+            margin: 5px;
+            pointer-events: none;
+        }
+        
+        /* For PDF export optimization */
+        @media print {
+            body {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                background: white;
+            }
+            
+            .container-custom {
+                width: 100%;
+                max-width: none;
+            }
+            
+            section {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="py-6 bg-white shadow-md relative z-10">
+        <div class="container-custom flex justify-between items-center">
+            <a href="#" class="brand-logo text-2xl">EWEBIRE</a>
+            <nav>
+                <ul class="flex space-x-8">
+                    <li><a href="#about" class="text-gray-700 hover:text-gold-primary transition-colors duration-300">About</a></li>
+                    <li><a href="#features" class="text-gray-700 hover:text-gold-primary transition-colors duration-300">Features</a></li>
+                    <li><a href="#join" class="btn-gold">Join Waitlist</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 marble-bg relative">
+        <div class="container-custom relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="mb-4">
+                        <span class="limited-badge">
+                            <i class="fas fa-gem"></i> Limited Edition - Only 555 Copies
+                        </span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        <span class="gold-text">MANIFEST</span><br>
+                        <span class="gold-text">LIKE YOU</span><br>
+                        <span class="gold-text">MEAN IT</span>
+                    </h1>
+                    <p class="text-xl mb-8">The no-fluff guide to turning thoughts into things.</p>
+                    <a href="#join" class="btn-gold mb-6 inline-block">Secure Your Copy</a>
+                    
+                    <div class="mt-8">
+                        <p class="text-gray-600 mb-2">Time remaining until release:</p>
+                        <div class="countdown-container">
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="days">00</div>
+                                <div class="countdown-label">Days</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="hours">00</div>
+                                <div class="countdown-label">Hours</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="minutes">00</div>
+                                <div class="countdown-label">Minutes</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value" id="seconds">00</div>
+                                <div class="countdown-label">Seconds</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-display flex justify-center">
+                    <div class="book-frame">
+                        <img src="https://page1.genspark.site/v1/base64_upload/0927a3f49ea96fbe04df670043bf8441" alt="Manifest Like You Mean It Book Cover" class="w-full max-w-xs mx-auto relative z-10">
+                    </div>
+                    <div class="book-shadow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container-custom">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gold-text">ABOUT THIS EBOOK</span>
+                </h2>
+                <div class="gold-divider"></div>
+                <p class="text-xl max-w-3xl mx-auto">
+                    "MANIFEST LIKE YOU MEAN IT" is the definitive guide for those who are tired of vague
+                    manifestation advice and ready for concrete, actionable steps.
+                </p>
+            </div>
+
+            <div class="mt-12 premium-card p-8 max-w-4xl mx-auto">
+                <p class="text-lg leading-relaxed mb-6">
+                    This premium resource cuts through the noise with practical techniques that
+                    transform your thoughts into tangible reality, presented in a straightforward, no-nonsense approach.
+                </p>
+                <p class="text-lg leading-relaxed">
+                    Unlike other manifestation guides that provide vague affirmations and wishful thinking,
+                    this comprehensive blueprint delivers proven methods that create real results in your life.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 luxury-bg relative">
+        <div class="container-custom relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gold-text">TRANSFORM YOUR MANIFESTATION PRACTICE</span>
+                </h2>
+                <div class="gold-divider"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Feature 1 -->
+                <div class="premium-card p-8 text-center">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Mindset Mastery</h3>
+                    <p class="text-gray-600">
+                        Transform limiting beliefs into powerful catalysts for creating the life you desire.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="premium-card p-8 text-center">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Accelerated Results</h3>
+                    <p class="text-gray-600">
+                        Learn how to speed up your manifestations through proven psychological principles.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="premium-card p-8 text-center">
+                    <div class="feature-icon mx-auto">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Practical Techniques</h3>
+                    <p class="text-gray-600">
+                        No-fluff, actionable methods that produce real results in your manifestation journey.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Inside Section -->
+    <section class="py-20 bg-white">
+        <div class="container-custom">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gold-text">WHAT'S INSIDE</span>
+                </h2>
+                <div class="gold-divider"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-check text-gold-primary text-xl mt-1"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Step-by-step manifestation frameworks</h3>
+                        <p class="text-gray-600">Clear pathways that guide you from intention to reality.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-check text-gold-primary text-xl mt-1"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Mind reprogramming techniques</h3>
+                        <p class="text-gray-600">Transform your thought patterns to align with your desires.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-check text-gold-primary text-xl mt-1"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Abundance activation exercises</h3>
+                        <p class="text-gray-600">Practical activities that open you to receiving more.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-check text-gold-primary text-xl mt-1"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Wealth consciousness blueprints</h3>
+                        <p class="text-gray-600">Restructure your relationship with money and success.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-check text-gold-primary text-xl mt-1"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Reality shifting methodologies</h3>
+                        <p class="text-gray-600">Advanced techniques to create quantum leaps in results.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-check text-gold-primary text-xl mt-1"></i>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Manifestation troubleshooting guide</h3>
+                        <p class="text-gray-600">Solutions for common blocks and challenges.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 luxury-bg relative">
+        <div class="container-custom relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gold-text">SUCCESS STORIES</span>
+                </h2>
+                <div class="gold-divider"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="testimonial">
+                    <span class="testimonial-quote">"</span>
+                    <p class="text-lg mb-6">This book completely transformed my approach to manifestation. Within weeks of applying these techniques, I manifested my dream job.</p><div class="flex items-center">
+                        <div class="ml-3">
+                            <h4 class="font-semibold">Sarah J.</h4>
+                            <p class="text-sm text-gray-500">Marketing Executive</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial">
+                    <span class="testimonial-quote">"</span><p class="text-lg mb-6">The practical approach in this guide is refreshing. No more vague spiritual concepts – just actionable steps that actually work.</p>
+                    <div class="flex items-center">
+                        <div class="ml-3">
+                            <h4 class="font-semibold">Michael T.</h4>
+                            <p class="text-sm text-gray-500">Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Waitlist Section -->
+  <section id="join" class="py-20 bg-white">
+        <div class="container-custom">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gold-text">JOIN THE WAITLIST</span>
+                </h2>
+                <div class="gold-divider"></div>
+                <p class="text-xl max-w-3xl mx-auto">
+                    Be the first to know when "MANIFEST LIKE YOU MEAN IT" launches
+                    and receive exclusive bonuses only available to waitlist members.
+                </p>
+                <div class="my-6">
+                    <span class="limited-badge">
+                        <i class="fas fa-gem"></i> Limited Edition - Only 555 Copies Available
+                    </span>
+                </div>
+            </div>
+
+            <div class="max-w-xl mx-auto premium-card p-10">
+                <form id="waitlistForm" class="space-y-6">
+                    <div>
+                        <label for="fullName" class="block text-gray-700 mb-2 font-medium">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" class="luxury-input" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-gray-700 mb-2 font-medium">Email Address</label>
+                        <input type="email" id="email" name="email" class="luxury-input" placeholder="Your Email" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-gold w-full py-4 text-lg">SECURE MY SPOT</button>
+                    
+                    <p class="text-center text-sm text-gray-500 mt-4">
+                        By joining, you'll be first in line when we launch. No spam, ever.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-gray-900 text-white">
+        <div class="container-custom"><div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="brand-logo text-2xl">EWEBIRE</a>
+                    <p class="text-gray-400 mt-2">Transforming thoughts into reality.</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-gold-primary transition-colors duration-300">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gold-primary transition-colors duration-300">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gold-primary transition-colors duration-300">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gold-primary transition-colors duration-300">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+                <p>&copy; 2023 Ewebire. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript -->
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            // Set the date to 3 days from now
+            const now = new Date();
+            const targetDate = new Date();
+            targetDate.setDate(now.getDate() + 3);
+            
+            const currentTime = now.getTime();
+            const targetTime = targetDate.getTime();
+            const timeRemaining = targetTime - currentTime;
+            
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').innerHTML = days < 10 ? `0${days}` : days;
+            document.getElementById('hours').innerHTML = hours < 10 ? `0${hours}` : hours;
+            document.getElementById('minutes').innerHTML = minutes < 10 ? `0${minutes}` : minutes;
+            document.getElementById('seconds').innerHTML = seconds < 10 ? `0${seconds}` : seconds;
+        }
+        
+        // Initial call
+        updateCountdown();
+        
+        // Update every second
+        setInterval(updateCountdown, 1000);
+        
+        // Form Submission
+        document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            // Here you would typically send this data to your server or email service
+            // For now, we'll just show a thank you message
+            this.innerHTML = `
+                <div class="text-center">
+                    <div class="text-5xl mb-4 text-gold-primary"><i class="fas fa-check-circle"></i></div>
+                    <h3 class="text-2xl font-bold mb-2">Thank You, ${fullName}!</h3>
+                    <p class="mb-6">Your spot on the waitlist has been secured. We've sent a confirmation to ${email}.</p>
+                    <p class="text-sm text-gray-600">We'll notify you as soon as "MANIFEST LIKE YOU MEAN IT" is available.</p>
+                </div>
+            `;
+        });
+        
+        // Smooth Scrollingdocument.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animate countdown numbers
+        function animateNumbers() {
+            const countdownValues = document.querySelectorAll('.countdown-value');
+            countdownValues.forEach(item => {
+                const currentValue = item.innerHTML;item.innerHTML = '';
+                item.classList.remove('animate-number');
+                setTimeout(() => {
+                    item.innerHTML = currentValue;
+                    item.classList.add('animate-number');
+                }, 50);
+            });
+        }
+        
+        // Run animation every 10 seconds
+        setInterval(animateNumbers, 10000);
+    </script>
+</body>
+</html>
